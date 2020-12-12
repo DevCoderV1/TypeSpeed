@@ -45,6 +45,11 @@ body {
     text-align: center;
 }
 
-.spanColor {
-    color: blue;
+.correctText {
+    color: green;
+}
+
+.incorrectText {
+    color: red;
+    text-decoration: underline;
 }
