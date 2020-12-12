@@ -3,19 +3,30 @@ const NewText = Text.textContent;
 const SplitText = NewText.split("")
 const UserInput = document.getElementById('userinput')
 const Timer = document.getElementById('timer')
+const RETRY = document.getElementById('restart')
 Text.innerHTML = "";
 
 //Add span tag to each letter in the text content
-for (let x = 0; x < SplitText.length; x++) {
+for (let x = 13; x < SplitText.length; x++) {
     Text.innerHTML += "<span>" + SplitText[x] + "</span>"
 }
+//Timer
+var count = 0
+let TimeCount = setInterval(function () {
+    // I wrote this on two lines for clarity.
+    count++
 
+    Timer.innerHTML = `${count}`
+
+}, 1000);
+
+//event once enter character in input
 UserInput.addEventListener('input', (e) => {
     const Inputtext = e.target.value;
     const SplitLetter = Inputtext.split("")
     const SpanText = Text.querySelectorAll("span")
     let Correct = true
-    SpanText.forEach((letter, index = 12) => {
+    SpanText.forEach((letter, index) => {
         const CurrentLetter = SplitLetter[index]
         if (CurrentLetter == null) {
             letter.classList.remove('correctText')
@@ -31,8 +42,16 @@ UserInput.addEventListener('input', (e) => {
         }
     })
     if (Correct) {
-        console.log(time)
+        Timer.innerHTML = " Your Time Record is :" + `${count}` + " seconds"
+        clearInterval(TimeCount)
+        RETRY.style.display = "block"
+
     }
 
 
 })
+
+function restart() {
+    location.reload()
+}
+

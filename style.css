@@ -28,6 +28,19 @@ body {
     font-size: 1.5rem;
 }
 
+.restart {
+    text-align: center;
+    width: 100%;
+    display: none;
+}
+
+.restart button {
+    font-size: 1rem;
+    padding: 5px;
+    border: none;
+    cursor: pointer;
+}
+
 .type_container {
     min-height: 40vh;
     display: flex;
