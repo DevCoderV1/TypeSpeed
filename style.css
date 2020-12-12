@@ -1,0 +1,50 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: black;
+    color: white;
+}
+
+.text_container {
+    min-height: 50vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.text_container .text {
+    padding: 25px;
+    font-size: 2rem;
+    font-weight: bold;
+}
+
+.timer {
+    width: 100%;
+    text-align: center;
+    font-size: 1.5rem;
+}
+
+.type_container {
+    min-height: 40vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.type_container input {
+    outline: none;
+    border: none;
+    background-color: transparent;
+    border-bottom: 1px solid red;
+    color: white;
+    font-size: 1.5rem;
+    text-align: center;
+}
+
+.spanColor {
+    color: blue;
+}
