@@ -56,9 +56,13 @@ body {
 }
 
 .restart button {
-    font-size: 1rem;
-    padding: 5px;
-    border: none;
+    padding: 10px;
+    border: 1px solid black;
+    font-size: 2vw;
+    outline: none;
+    border-radius: 0.3rem;
+    background: rgb(13, 228, 186);
+    background: linear-gradient( 144deg, rgba(13, 228, 186, 1) 0%, rgba(13, 228, 157, 1) 36%, rgba(41, 189, 207, 1) 96%);
     cursor: pointer;
 }
 
