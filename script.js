@@ -20,6 +20,7 @@ startBTN.addEventListener('keyup', (e) => {
     if (e.keyCode === 13) {
         startBTN.style.display = "none"
         textbox.style.display = "block"
+        Timer.innerHTML = count
         UserInput.focus()
         TimeCount = setInterval(function () {
             // I wrote this on two lines for clarity.
